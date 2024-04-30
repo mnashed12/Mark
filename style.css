@@ -1,0 +1,468 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppings:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    color: #ededed;
+    background-color: linear-gradient(#ffdad5, #fff7f9);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo {
+    font-size: 25px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #00abf0;
+}
+
+.home {
+     height: 100vh;
+     background: url('home.jpg') no-repeat;
+     background-size: cover;
+     background-position: center;
+     display: flex;
+     align-items: center;
+     padding: 0 10%;
+     font-family: 'Poppins', sans-serif;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h1 {
+    font-size: 56px; 
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #00abf0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.home-content p {
+    font-size: 16px;
+    margin: 20px 0 40px;
+}
+
+.home-content .btn-box {
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px; 
+}
+
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #00abf0;
+    border: 2px solid #00abf0;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn-box a:nth-child(2){
+    background: transparent;
+    color: #00abf0;
+}
+
+.btn-box a:nth-child(2):hover {
+    background: transparent;
+    color: #081b29;
+}
+
+.btn-box a:nth-child(2)::before {
+    background: #00abf0;
+}
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #081b29;
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box a:hover
+{
+    color: #00abf0;
+}
+
+.btn-box a:hover::before {
+    width: 100%;
+}
+
+.home-sci {
+    position: absolute;
+    bottom: 40px;
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-sci a {
+    position: relative;
+    display: inline-flex; 
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #00abf0;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #00abf0;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.home-sci a:hover {
+    color: #081b29;
+}
+
+.home-sci a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: #00abf0;
+    z-index: -1;
+    transition: .5s;
+}
+
+.home-sci a:hover::before {
+    width: 100%;
+}
+
+
+section:not(.home)
+{
+    background: #0c0c0c;
+}
+
+.About-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff; /* Light background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    /*overflow: auto; /*Resize Tab*/
+    /*resize: both; /*Resize Tab*/
+}
+
+.About-content h2, .About-content h3, .About-content h4 {
+    color: #333; /* Dark text color */
+    margin-bottom: 10px;
+}
+
+.About-content h3{
+    margin-top: 10px;
+}
+
+.About-content p {
+    margin-bottom: 15px;
+    color: #555; /* Gray text color */
+    line-height: 1.7; /* Comfortable line height */
+}
+
+.About-content ul {
+    list-style-type: disc; /* Bullet style */
+    margin-left: 20px; /* Indent list */
+    color: #333;
+}
+
+.About-content li {
+    margin-bottom: 5px;
+}
+
+.about-image{                               /*dimensions of the image*/
+    width: 200px;
+    height: auto;
+    float: left;
+    margin-left: 50px;
+    position: absolute;
+    top: 950px;
+    left: 123px;
+    border: 2px solid #ffffff;
+}
+
+.baruch-logo{
+    position: absolute;
+    width: 400px;
+    height: auto;
+    top: 1300px;
+    left: 65px;
+}
+
+.gcu-logo{
+    position: absolute;
+    width: 400px;
+    height: auto;
+    top: 1500px;
+    left: 65px;
+}
+
+.about-content{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.Hobby-list h1{
+    position: absolute;
+    right: 190px;
+    top: 950px;
+}
+
+.chess-logo{
+    position: absolute;
+    width: 150px;
+    height: auto;
+    right: 205px;
+    top:970px;
+}
+
+.Hobby-list h2{
+    position: absolute;
+    color: #ffffff;
+    right: 130px;
+    top: 1110px;
+}
+
+.golf-logo{
+    position: absolute;
+    max-width: 100px;
+    height: auto;
+    right: 225px;
+    top: 1184px;
+}
+
+.Hobby-list h3{
+    color: #ffffff;
+    position: absolute;
+    right: 150px;
+    top: 1300px;
+}
+
+.piano-logo{
+    position: absolute;
+    max-width: 100px;
+    height: auto;
+    right: 225px;
+    top: 1370px;
+}
+
+.Hobby-list h4{
+    color: #ffffff;
+    position: absolute;
+    right: 155px;
+    top: 1495px;
+    font-size: larger;
+}
+
+.github-logo{
+    position: absolute;
+    max-width: 100px;
+    height: auto;
+    right: 225px;
+    top: 1555px;
+}
+
+.Hobby-list h5{
+    color: #ffffff;
+    position: absolute;
+    right: 130px;
+    top: 1650px;
+    font-size: larger;
+}
+
+.youtube-logo{
+    position: absolute;
+    max-width: 100px;
+    height: auto;
+    right: 223px;
+    top: 1710px;
+}
+
+.contact{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.contact-container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #181818;
+}
+
+.contact-left{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+
+.contact-left-title h2{
+    font-weight: 600;
+    color: #a363aa;
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+
+.contact-left-title hr{
+    border: none;
+    width: 120px;
+    height: 5px;
+    background-color: #a363aa;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.contact-inputs{
+    width: 400px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 500;
+    color: #666;
+    border-radius: 50px;
+}
+
+.content-left textarea{
+    height: 140px;
+    padding-top: 15px;
+    border-radius: 20px;
+}
+
+.contact-inputs:focus{
+    border: 2px solid #ff994f;
+}
+
+.contact-inputs::placeholder{
+    color: #a9a9a9;
+}
+
+.contact-left button{
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 16px;
+    color: #fff;
+    gap: 10px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(270deg,#ff994f,#fa6d86);
+    cursor: pointer;
+}
+
+.contact-left button img{
+    height: 15px;
+}
+
+.contact-right img{
+    width: 500px;
+}
+
+.bubbles{
+    position: relative;
+    display: flex;
+}
+
+.bubbles span{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    left: 800px;
+    top: 200px;
+    background: #f4c3dc;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #4fc3dc44,
+    0 0 50px #4fc3dc,
+    0 0 100px #4fc3dc;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(125s / var(--i));
+}
+
+.bubbles span:nth-child(even){
+    background: #ff2d75;
+    box-shadow: 0 0 0 10px #ff2d7544,
+    0 0 50 px #ff2d75,
+    0 0 100px #ff2d75;
+}
+
+@keyframes animate{
+    0%
+    {
+        transform: tranlsateY(100vh) sclae(0);
+    }
+    100%
+    {
+        transform: translateY(-150vh) scale(1)
+    }
+}
+
