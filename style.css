@@ -69,10 +69,12 @@ body {
     justify-content: left;
     box-sizing: border-box;
     background: url('home.jpg') no-repeat center/cover;
+    padding: 80px 10%;
 }
 
 .home-content {
     text-align: center;
+    max-width: 1000px;
     padding: 80px 10%;
     box-sizing: border-box;
     position: relative;
@@ -253,7 +255,7 @@ section:not(.home) {
 }
 
 .About-content {
-    max-width: 1000px;
+    max-width: 800px;
     padding: 20px;
     background-color: #ffffff;
     border-radius: 8px;
@@ -399,13 +401,11 @@ section:not(.home) {
     }
 
     .home {
-        height: auto;
-        padding: auto;
+        padding: 40px 5%;
     }
 
     .home-content {
-        max-width: 100%;
-        padding: 10 10px;
+        padding: 20px 10px;
     }
 
     .home-content h1 {
@@ -494,5 +494,38 @@ section:not(.home) {
 
     .contact-right img {
         max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .About-content {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .About-content h2 {
+        font-size: 24px;
+    }
+
+    .About-content h3 {
+        font-size: 20px;
+    }
+
+    .About-content h4 {
+        font-size: 18px;
+    }
+
+    .About-content ul {
+        margin-left: 15px;
+    }
+
+    .About-content p {
+        margin-bottom: 10px;
     }
 }
